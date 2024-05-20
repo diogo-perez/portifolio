@@ -1,0 +1,12 @@
+.font-press-start {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.text-green-custom {
+    color: #00ff00;
+}
+
+.home-container {
+    height: 100vh;
+    margin-top: -20vh;
+}
