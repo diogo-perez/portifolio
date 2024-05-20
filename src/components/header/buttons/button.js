@@ -12,7 +12,7 @@ const NavigationButtons = () => {
             <NavLink to="/projects" className="nav-link" activeClassName="active">
                 Projetos
             </NavLink>
-            <NavLink to="/experiencias" className="nav-link" activeClassName="active">
+            <NavLink to="/jobs" className="nav-link" activeClassName="active">
                 Experiências
             </NavLink>
             <NavLink to="/contact" className="nav-link" activeClassName="active">

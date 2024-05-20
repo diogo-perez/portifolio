@@ -8,5 +8,10 @@
 
 .home-container {
     height: 100vh;
-    margin-top: -20vh;
+    margin-top: -10vh;
+}
+
+.home-container img {
+    border-radius: 50%;
+    margin-left: 50px;
 }

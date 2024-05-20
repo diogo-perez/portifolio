@@ -1,11 +1,11 @@
 import React from 'react';
 import './home.css';
 import { motion } from 'framer-motion';
-import dev from '../../assets/svg/dev_4.svg';
+import perfil from '../../assets/jpg/perfil.jpg';
 
 const Home = () => {
     return (
-        <motion.div
+        <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -29,10 +29,10 @@ const Home = () => {
                     Meu objetivo é construir uma carreira de atuação específica.
                 </p>
             </div>
-            <div className="md:w-2/5 md:p-30">
-                <img src={dev} alt="Programador com notebook" className="w-80 h-90 " />
+            <div className="md:w-2/5 md:p-30 ">
+                <img src={perfil} alt="perfil" className="w-80 h-90 " />
             </div>
-        </motion.div>
+        </div>
     );
 };
 

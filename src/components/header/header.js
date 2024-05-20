@@ -3,7 +3,7 @@ import { Navbar } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import perfil from '../../assets/jpg/perfil.jpg';
+import logo from '../../assets/png/logo.png';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import './header.css';
@@ -47,8 +47,8 @@ const Header = () => {
                         <Skeleton circle={true} height={150} width={150} style={{ marginRight: '20px' }} />
                     )}
                     <img
-                        src={perfil}
-                        alt="Minha Foto"
+                        src={logo}
+                        alt="logo"
                         className="header-photo"
                         onLoad={() => setIsImageLoaded(true)}
                         style={{ display: isImageLoaded ? 'block' : 'none', zIndex: '1' }}
