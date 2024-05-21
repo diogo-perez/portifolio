@@ -26,8 +26,8 @@ const Contact = () => {
     return (
         <div className="bg-black h-screen flex flex-col justify-center items-center text-white">
             <h1 className="text-2xl font-bold mb-1">Entre em contato</h1>
-            <p className="mt-2 mb-8 text-center">Tem um projeto em mente ou apenas quer dizer oi? Sinta-se livre para me enviar uma mensagem!</p>
-            <form className="w-full max-w-md">
+            <p className="mt-2 mb-8 text-center mb-2 p-3">Tem um projeto em mente ou apenas quer dizer oi? Sinta-se livre para me enviar uma mensagem!</p>
+            <form className="pl-5 pr-10 w-full max-w-md">
                 <div className="mb-4">
                     <label htmlFor="name" className="block text-sm font-medium text-white">Nome</label>
                     <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:border-green-500 text-black" required />

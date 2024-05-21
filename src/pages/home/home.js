@@ -1,19 +1,19 @@
 import React from 'react';
-import './home.css';
 import { motion } from 'framer-motion';
 import perfil from '../../assets/jpg/perfil.jpg';
+import './home.css';
 
 const Home = () => {
     return (
-        <div
+        <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="home-container bg-black text-white p-10 flex flex-col md:flex-row items-center"
+            className="home-container bg-black text-white p-10 flex flex-col md:flex-row items-center min-h-screen"
         >
-            <div className="md:w-4/5 md:p-10">
-                <h1 className="text-2xl text-green-custom text-center font-press-start">Olá, Bem-vindo(a)</h1>
-                <p className="mt-3 text-base font-sans text-justify max-w-full">
+            <div className="md:w-3/5 p-4">
+                <h1 className="text-2xl md:text-3xl text-green-custom text-center font-press-start">Olá, Bem-vindo(a)</h1>
+                <p className="mt-3 text-base font-sans text-justify">
                     Em 2017, aos 16 anos, entrei para o mundo da tecnologia com o objetivo de construir sistemas interativos.
                     Possuo formação técnica em informática pelo IFMS (Instituto Federal do Mato Grosso do Sul).
                     Tenho experiência em desenvolvimento web/mobile/desktop, análise de dados e infraestrutura de redes,
@@ -29,10 +29,10 @@ const Home = () => {
                     Meu objetivo é construir uma carreira de atuação específica.
                 </p>
             </div>
-            <div className="md:w-2/5 md:p-30 ">
-                <img src={perfil} alt="perfil" className="w-80 h-90 " />
+            <div className="md:w-2/5 p-4 flex justify-center md:justify-end">
+                <img src={perfil} alt="perfil" className="w-80 h-90 rounded-full bg-black p-2" />
             </div>
-        </div>
+        </motion.div>
     );
 };
 

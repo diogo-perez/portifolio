@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Navbar } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -42,9 +42,9 @@ const Header = () => {
         >
             <Navbar bg="black" variant="dark" expand="lg" className="header-navbar">
                 <div className="binary-rain"></div>
-                <Navbar.Brand href="/" className="header-content">
+                <Navbar.Brand href="/" className="md:container mx-auto header-content">
                     {!isImageLoaded && (
-                        <Skeleton circle={true} height={150} width={150} style={{ marginRight: '20px' }} />
+                        <Skeleton circle={true} height={120} width={120} style={{ marginRight: '20px' }} />
                     )}
                     <img
                         src={logo}
@@ -54,8 +54,8 @@ const Header = () => {
                         style={{ display: isImageLoaded ? 'block' : 'none', zIndex: '1' }}
                     />
                     <div className="header-text">
-                        <h1 className="header-name">Diogo Perez Areco</h1>
-                        <p className="header-phrase">Desenvolvedor Front-end & Mobile</p>
+                        <h1 className="text-white header-name">Diogo Perez Areco</h1>
+                        <p className="text-white header-phrase">Desenvolvedor Front-end & Mobile</p>
                         <div className="social-icons">
                             <a href="https://github.com/diogo-perez" target="_blank" rel="noopener noreferrer" title="GitHub">
                                 <FontAwesomeIcon icon={faGithub} size="lg" className="social-icon" />
@@ -68,17 +68,20 @@ const Header = () => {
                             </a>
                         </div>
                     </div>
+
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
                     <div className="header-bottom">
                         <div className="header-example-text">
-                            <p>Aqui se construi experiências digitais perfeitas, envolventes e acessíveis.</p>
+                            <p>Aqui se constroem experiências digitais perfeitas, envolventes e acessíveis.</p>
                         </div>
                         <NavigationButtons />
                     </div>
                 </Navbar.Collapse>
+
             </Navbar>
+
         </motion.div>
     );
 };

@@ -1,20 +1,11 @@
+/* header.css */
+
 .header-container {
     position: relative;
     overflow: hidden;
     background-color: #000;
-    /* Preto */
     color: #fff;
-    /* Branco */
-    height: 30vh;
-}
-
-.header-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    height: auto;
 }
 
 .binary-rain {
@@ -30,7 +21,6 @@
     font-family: monospace;
     font-size: 18px;
     color: #00ff00;
-    /* Verde */
     animation: rain 10s linear infinite;
 }
 
@@ -49,8 +39,8 @@
 .header-navbar {
     position: relative;
     background-color: #000;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .header-content {
@@ -66,12 +56,8 @@
     margin-right: 20px;
 }
 
-.header-text {
-    color: white;
-}
-
 .header-name {
-    font-size: 32px;
+    font-size: 24px;
     margin: 0;
 }
 
@@ -86,15 +72,16 @@
     font-style: italic;
     font-size: 17px;
     padding: 10px;
-    margin-top: 60px;
-    margin-left: 50px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .header-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    margin: 10px;
+    width: 90%;
 }
 
 .social-icons {
@@ -106,10 +93,69 @@
 .social-icon {
     color: #fff;
     transition: color 0.3s ease;
-    position: relative;
 }
 
 .social-icon:hover {
     color: #00ff00;
     cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .header-content {
+        margin: 8px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-container img {
+        margin: 10%;
+        margin-left: 60px;
+    }
+
+    .header-navbar {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .header-photo {
+        width: 100px;
+        height: 100px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar-toggler {
+        color: #fff;
+        border: none;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .header-name,
+    .header-phrase {
+        display: block;
+        font-size: 20px;
+    }
+
+    .header-example-text {
+        display: none !important;
+        /* margin-top: 5px;
+        margin: 10px; */
+    }
+
+    .social-icons {
+        justify-content: center;
+        width: 100%;
+    }
 }

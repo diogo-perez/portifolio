@@ -7,11 +7,33 @@
 }
 
 .home-container {
-    height: 100vh;
-    margin-top: -10vh;
+    min-height: 100vh;
 }
 
 .home-container img {
     border-radius: 50%;
-    margin-left: 50px;
+    margin-left: 0;
+    /* Remove margin to better center the image */
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .home-container img {
+        margin-left: 0;
+        /* Ensure image is centered on small screens */
+    }
+
+    .home-container h1 {
+        font-size: 1.5rem;
+        /* Smaller font size for small screens */
+    }
+
+    .home-container p {
+        font-size: 1rem;
+        /* Smaller font size for small screens */
+    }
 }
