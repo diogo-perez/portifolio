@@ -49,7 +49,7 @@ const Header = () => {
                     <img
                         src={logo}
                         alt="logo"
-                        className="header-photo"
+                        className="header-photo z-1"
                         onLoad={() => setIsImageLoaded(true)}
                         style={{ display: isImageLoaded ? 'block' : 'none', zIndex: '1' }}
                     />
@@ -72,7 +72,7 @@ const Header = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
-                    <div className="header-bottom">
+                    <div className="pl-1 pr-5 header-bottom">
                         <div className="header-example-text">
                             <p>Aqui se constroem experiências digitais perfeitas, envolventes e acessíveis.</p>
                         </div>
