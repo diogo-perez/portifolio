@@ -135,46 +135,37 @@ const Experience = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
                         >
-                            <div className="flex flex-nowrap overflow-x-scroll" style={{ scrollSnapType: 'x proximity' }}>
-                                {experiences.map((experience, index) => (
-                                    <motion.div
-                                        key={index}
-                                        className="bg-white text-black p-6 rounded-lg min-w-full max-w-full shadow-md mx-1"
-                                        drag="x"
-                                        dragConstraints={{ left: -100 * (experiences.length - 1), right: 0 }}
-                                        dragElastic={1}
-                                        style={{ scrollSnapAlign: 'center' }}
-                                    >
-                                        <h2 className="text-2xl font-bold">{experience.title}</h2>
-                                        <p className="text-gray-500 mt-2">{experience.company}</p>
-                                        <p className="mt-2">{experience.startDate} - {experience.endDate}</p>
-                                        <div className="mt-4">
-                                            <h3 className="font-bold">Atividades:</h3>
-                                            <p>{experience.atividades}</p>
-                                        </div>
-                                        <div className="mt-4">
-                                            <h3 className="font-bold">Competências:</h3>
-                                            <p>{experience.competencias}</p>
-                                        </div>
-                                    </motion.div>
-                                ))}
-                            </div>
+                            {experiences.map((experience, index) => (
+                                <motion.div
+                                    key={index}
+                                    className="bg-white text-black p-6 rounded-lg min-w-full max-w-full shadow-md mx-1"
+                                >
+                                    <h2 className="text-2xl font-bold">{experience.title}</h2>
+                                    <p className="text-gray-500 mt-2">{experience.company}</p>
+                                    <p className="mt-2">{experience.startDate} - {experience.endDate}</p>
+                                    <div className="mt-4">
+                                        <h3 className="font-bold">Atividades:</h3>
+                                        <p>{experience.atividades}</p>
+                                    </div>
+                                    <div className="mt-4">
+                                        <h3 className="font-bold">Competências:</h3>
+                                        <p>{experience.competencias}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
                             <div className="absolute inset-x-0 bottom-0 flex justify-center space-x-2 mb-4">
-                                {experiences.map((_, index) => (
+                                {experiences.map((experience, index) => (
                                     <div
                                         key={index}
-                                        className={`w-3 h-3 rounded-full ${index === 0 ? 'bg-green-500' : 'bg-gray-400'}`}
+                                        className={`w-3 h-3 rounded-full ${selectedExperience.company === experience.company ? 'bg-green-500' : 'bg-gray-400'}`}
                                         onClick={() => {
-                                            const cardWidth = document.querySelector('.overflow-x-scroll').scrollWidth / experiences.length;
-                                            document.querySelector('.overflow-x-scroll').scrollTo({
-                                                left: cardWidth * index,
-                                                behavior: 'smooth',
-                                            });
+                                            setSelectedExperience(experience);
                                         }}
                                     ></div>
                                 ))}
                             </div>
                         </motion.div>
+
 
                     ) : (
                         <motion.div

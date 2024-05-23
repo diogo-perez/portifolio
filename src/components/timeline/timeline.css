@@ -1,0 +1,28 @@
+.table-fixed {
+    table-layout: fixed;
+}
+
+.table-fixed th,
+.table-fixed td {
+    width: 20%;
+}
+
+img.cursor-pointer {
+    cursor: pointer;
+}
+
+.fixed.inset-0 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.z-50 {
+    z-index: 50;
+}
+
+.bg-opacity-75 {
+    background-color: rgba(0, 0, 0, 0.75);
+}
